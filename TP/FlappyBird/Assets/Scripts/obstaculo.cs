@@ -10,4 +10,10 @@ public class obstaculo : MonoBehaviour {
 	private void Update () {
 		this.transform.Translate(Vector3.left*this.velocidade);
 	}
+	private void Awake(){
+		this.transform.Translate(Vector3.up * Random.Range(-2,2));
+	}
+	private void OnTriggerEnter2D(Collider2D obj){
+		GameObject.Destroy(this.gameObject);
+	}
 }
