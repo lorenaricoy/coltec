@@ -51,8 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\sc.cs" />
      <Compile Include="Assets\Scripts\Aviao.cs" />
      <Compile Include="Assets\Scripts\Carrossel.cs" />
+     <Compile Include="Assets\Scripts\Diretor.cs" />
      <Compile Include="Assets\Scripts\GeradorDeObstaculos.cs" />
      <Compile Include="Assets\Scripts\obstaculo.cs" />
  <Reference Include="UnityEngine.CoreModule">
