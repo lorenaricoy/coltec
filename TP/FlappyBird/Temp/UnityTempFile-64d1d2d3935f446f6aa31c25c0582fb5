@@ -155,7 +155,6 @@
 -define:UNITY_EDITOR_LINUX
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
-Assets/scr.cs
 Assets/Scripts/Aviao.cs
 Assets/Scripts/Carrossel.cs
 Assets/Scripts/Diretor.cs

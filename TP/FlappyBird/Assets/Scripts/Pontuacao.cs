@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class Pontuacao : MonoBehaviour {
 	private int pontos;
 	[SerializeField] private Text textoPontuacao;
+	private AudioSource audioPontuacao;
 
-	public void adicionaPontos(){
+	private void Awake(){
+		this.audioPontuacao = this.GetComponent<AudioSource>();
+	}
+
+	public void AdicionaPontos(){
 		this.pontos++;
 		this.textoPontuacao.text = this.pontos.ToString();
+		this.audioPontuacao.Play();
 	}
 
 	public void Reiniciar(){

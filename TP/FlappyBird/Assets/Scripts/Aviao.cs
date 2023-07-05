@@ -20,14 +20,13 @@ public class Aviao : MonoBehaviour {
     }
 
     private void Update () { 
-        if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump"))
-        {
+        if(Input.GetButtonDown("Fire1") || Input.GetButtonDown("Jump")){
             this.Impulsionar();
         }
     }
 
-    private void Impulsionar()
-    {
+    private void Impulsionar(){
+        this.fisica.velocity = Vector2.zero;
         this.fisica.AddForce(Vector2.up * this.forca, ForceMode2D.Impulse);
     }
 
@@ -37,7 +36,7 @@ public class Aviao : MonoBehaviour {
     }
 
     public void Reiniciar(){
-        this.transform.position = posicaoInicial;
+        this.transform.position = this.posicaoInicial;
         this.fisica.simulated= true;
     }
 

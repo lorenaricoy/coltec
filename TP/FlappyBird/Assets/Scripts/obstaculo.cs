@@ -6,18 +6,21 @@ public class obstaculo : MonoBehaviour {
 	
 	[SerializeField] private float velocidade;
 	private Vector3 posicaoDoAviao;
-	private bool pontuei = false;
+	public bool pontuei = false;
 	private Pontuacao pontuacao;
 
 	private void Start (){
 		this.posicaoDoAviao=GameObject.FindObjectOfType<Aviao>().transform.position;
+		this.pontuacao= GameObject.FindObjectOfType<Pontuacao>();
 	}
 
 	private void Update () {
-		this.transform.Translate(Vector3.left*this.velocidade);
-		if(!this.pontuei && this.transform.position.x < this.posicaoDoAviao.z){
+		this.transform.Translate(Vector3.left*this.velocidade *Time.deltaTime);
+
+
+		if(!this.pontuei && this.transform.position.x < this.posicaoDoAviao.z - 12){
 			this.pontuei = true;
-			this.pontuacao.adicionaPontos();
+			this.pontuacao.AdicionaPontos();
 		}
 	}
 
